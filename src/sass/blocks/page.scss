@@ -1,0 +1,23 @@
+.page {
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  @include main-font;
+}
+
+.page__header {
+  grid-row: 1;
+}
+
+.page__main {
+  grid-row: 2;
+}
+
+.page__footer {
+  grid-row: 3;
+}
