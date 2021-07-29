@@ -6,9 +6,9 @@ import Footer from "../footer/footer";
 
 const App = () => {
   return <>
-    {<Header/>}{/*
+    {<Header/>}
     {<Main/>}
-    {<Footer/>}*/}
+    {<Footer/>}
   </>
 };
 

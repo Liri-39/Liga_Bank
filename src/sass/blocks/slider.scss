@@ -1,7 +1,6 @@
 .slider {
   height: 400px;
   background-color: $bright-blue;
-  background-image: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, $gradient-blue 99.79%);
 
   @include main-font;
 }
@@ -31,6 +30,10 @@
   font-size: 54px;
   line-height: 63px;
   color: $light-grey;
+
+  &--light {
+    color: $graphite;
+  }
 }
 
 .slider__description {
@@ -39,6 +42,10 @@
   font-size: 22px;
   line-height: 26px;
   color: $grey;
+
+  &--light {
+    color: $grey-blue;
+  }
 }
 
 .slider__button {
@@ -51,4 +58,9 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
+
+  &--light {
+    background-color: $bright-blue;
+    color: $light-grey;
+  }
 }

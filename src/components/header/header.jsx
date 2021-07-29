@@ -16,6 +16,11 @@ const Header = () => {
         setIsMenuOpen(false);
     }
 
+    const handleClickLoginLink = (evt) => {
+        evt.preventDefault();
+
+    }
+
     return <header className={`page__header page-header ${isMenuOpen? `mobile-menu` : ``}`}>
         <div className={`container page-header__wrapper ${isMenuOpen? `mobile-menu__wrapper` : ``}`}>
             <button
@@ -41,7 +46,10 @@ const Header = () => {
             <h2 className="visually-hidden">Вход в Интернет-банк</h2>
             <ul className={`nav-user page-header__nav-user ${isMenuOpen ? `mobile-menu__nav-user`: ``}`}>
                 <li className={`${isMenuOpen ? `mobile-menu__item` : ``}`}>
-                    <a className={`nav-user__login ${isMenuOpen ? `mobile-menu__login` : ``}`} href="/">
+                    <a className={`nav-user__login ${isMenuOpen ? `mobile-menu__login` : ``}`}
+                       onClick={handleClickLoginLink}
+                       href="/"
+                    >
                         <span>Войти в Интернет-банк</span>
                     </a>
                 </li>
