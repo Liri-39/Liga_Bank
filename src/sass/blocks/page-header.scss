@@ -3,20 +3,20 @@
   background-color: $light-grey;
 
   @media (max-width: 767px) {
-    padding-bottom: 16px;
+    padding-bottom: 10px;
     padding-top: 16px;
   }
 
   @media (min-width: 768px) {
     min-height: 69px;
-    padding-bottom: 24px;
+    padding-bottom: 19px;
     padding-top: 23px;
     align-items: flex-end;
   }
 
   @media (min-width: 1024px) {
     min-height: 91px;
-    padding-bottom: 39px;
+    padding-bottom: 36px;
     padding-top: 27px;
   }
 }
@@ -24,7 +24,7 @@
 .page-header__wrapper {
   flex-direction: row;
   align-content: center;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-start;
 
   @media (max-width: 767px) {
@@ -58,7 +58,7 @@
   }
 
   @media (min-width: 1024px) {
-    margin: 0 48px 0 105px;
+    margin: 0 48px 0 95px;
   }
 }
 

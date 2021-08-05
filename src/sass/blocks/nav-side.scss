@@ -13,15 +13,15 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  flex-wrap: wrap;
 
   @media (max-width: 767px) {
     width: 100%;
-    flex-wrap: wrap;
   }
 }
 
 .nav-side__list-item {
-  margin-right: 25px;
+  margin-right: 15px;
 
   &:last-child {
     margin-right: 0;
@@ -46,7 +46,7 @@
     }
   }
   @media (min-width: 1024px) {
-    margin-top: 10px;
+    margin-left: 10px;
   }
 
   &:focus {
