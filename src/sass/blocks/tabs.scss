@@ -1,0 +1,250 @@
+.tabs {
+  min-height: 362px;
+  position: relative;
+  background-color: $light-grey;
+  margin: 0;
+  padding: 55px 15px 0;
+
+  @media (min-width: 768px) {
+    min-height: 380px;
+    padding: 55px 45px 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 15px;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 60px auto 0;
+    padding: 0 98px;
+    gap: 0;
+    background-color: $white;
+  }
+}
+
+.tabs__img {
+  position: absolute;
+  display: flex;
+  width: 87px;
+  height: 113px;
+  top: 28%;
+  right: 1%;
+/*  background-image: url("../../img/tab@1x.png");*/
+  background-repeat: no-repeat;
+  background-position: right 26% bottom;
+  background-size: 300%;
+
+  @media (min-width: 768px) {
+    position: static;
+    width: 39%;
+    height: auto;
+    background-position: 80% 35%;
+    background-size: 145%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 50%;
+    height: auto;
+    background-position: 6% 50%;
+    background-size: 76%;
+    background-color: $light-grey;
+    background-clip: content-box;
+  }
+}
+
+.tabs__titles {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.tabs__title {
+  flex-grow: 1;
+  width: 25%;
+  height: 93px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+  & span {
+    margin-left: 10px;
+  }
+
+  &--active {
+    background-color: $light-grey;
+  }
+}
+
+.tabs__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: $light-grey;
+
+  @media (min-width: 768px) {
+    width: 55%;
+    row-gap: 24px;
+  }
+
+  @media (min-width: 1024px) {
+    min-height: 410px;
+    width: 50%;
+    padding-left: 70px;
+  }
+}
+
+.tabs__bullets-block {
+  margin-bottom: 10px;
+  justify-self: flex-end;
+  margin-top: auto;
+
+  @media (min-width: 768px) {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.tabs__button {
+  width: 290px;
+  height: 43px;
+  background: #2C36F2;
+  border-radius: 4px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: $light-grey;
+  margin: 4px auto;
+
+  @media (min-width: 768px) {
+    width: 198px;
+    height: 48px;
+    margin: 7px auto 0 0;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @media (min-width: 1024px) {
+    height: 51px;
+    margin: 9px auto 0 0;
+  }
+}
+
+.tabs__slogan {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: $graphite;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: 768px) {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 22px;
+    line-height: 140%;
+    margin-top: 55px;
+    width: 80%;
+    margin-bottom: 5px;
+  }
+}
+
+.tabs__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px;
+
+  @media (min-width: 768px) {
+    row-gap: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    row-gap: 15px;
+  }
+}
+
+.tabs__list-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 90%;
+  padding-left: 15px;
+  font-size: 14px;
+  line-height: 130%;
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: flex;
+    width: 8px;
+    height: 6px;
+    top: 6px;
+    left: 0;
+    align-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8' fill='none'%3E%3Cpath d='M1 3.25L4.80952 7L9 1' stroke='%231F1E25' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+  }
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 130%;
+    padding-left: 21px;
+    width: 100%;
+
+    &::before {
+      width: 11px;
+      height: 8px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+    line-height: 130%;
+    width: 80%;
+  }
+}
+
+.tabs__description {
+  width: 95%;
+  font-size: 14px;
+  line-height: 140%;
+
+  @media (min-width: 768px) {
+    width: 80%;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+    line-height: 140%;
+  }
+
+  &--link {
+    padding-left: 0.5rem;
+    font-weight: 500;
+    text-decoration-line: underline;
+    color: $graphite;
+  }
+}

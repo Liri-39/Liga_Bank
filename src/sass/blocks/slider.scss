@@ -13,9 +13,12 @@
 .slider__container {
   display: grid;
   height: 226px;
-  margin: 0;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 39px 1fr 1fr 16px;
+
+  @media (max-width: 1023px) {
+    margin: 0;
+  }
 
   @media (min-width: 768px) and (max-width: 1023px) {
     height: 300px;
@@ -148,32 +151,9 @@
 .slider__bullets-block {
   grid-row: 4;
   grid-column: 1/-1;
-  display: flex;
-  width: 100%;
-  height: auto;
-  justify-content: center;
-  align-items: flex-start;
-  column-gap: 6px;
 
   @media (min-width: 768px) {
     margin-top: 2px;
     column-gap: 8px;
-  }
-}
-
-.slider__bullet {
-  width: 6px;
-  height: 6px;
-  display: block;
-  border-radius: 50%;
-  background-color: $ocean-blue;
-
-  &--active {
-    background-color: $light-grey;
-  }
-
-  @media (min-width: 768px) {
-    width: 8px;
-    height: 8px;
   }
 }

@@ -2,16 +2,15 @@ import React, {useState, useEffect, useRef} from "react";
 import {sliders} from "../../mocks/slider";
 import {SLIDES_COUNT, SLIDE_DELAY} from "../../const";
 import Picture from "../picture/picture";
+import Bullets from "../bullets/bullets";
 
 const  useInterval = (callback, delay)=> {
     const savedCallback = useRef();
 
-    // Remember the latest function.
     useEffect(() => {
         savedCallback.current = callback;
     }, [callback]);
 
-    // Set up the interval.
     useEffect(() => {
         function tick() {
             savedCallback.current();
@@ -39,22 +38,28 @@ const Banner = () => {
 
     const handleTouchEnd = () => {
         if (touchStart - touchEnd > 150) {
-            if (slide < SLIDES_COUNT - 1) {
-                setSlide(slide + 1);
-            } else {setSlide(0)}
+            setNextSlide();
         }
 
         if (touchStart - touchEnd < -150) {
-            if (slide === 0) {
-                setSlide(SLIDES_COUNT - 1);
-            } else {setSlide( slide - 1)}
+            setPrevSlide();
         }
     }
 
-    useInterval(() => {
+    const setNextSlide = () => {
         if (slide < SLIDES_COUNT - 1) {
             setSlide(slide + 1);
         } else {setSlide(0)}
+    }
+
+    const setPrevSlide = () => {
+        if (slide === 0) {
+            setSlide(SLIDES_COUNT - 1);
+        } else {setSlide( slide - 1)}
+    }
+
+    useInterval(() => {
+        setNextSlide()
     }, SLIDE_DELAY);
 
     return <section className="slider page-main__slider" style={{backgroundColor:`${sliders[slide].sliderBackgroundColor}`}}>
@@ -72,13 +77,7 @@ const Banner = () => {
                     <a className={`button slider__button ${sliders[slide].isLightTheme && `slider__button--light`}`} href={sliders[slide].buttonLink}>{sliders[slide].buttonText}</a>
                 }
             </div>
-            <div className="slider__bullets-block">
-                {sliders.map((item, index) =>
-                    <span
-                        className={`slider__bullet  ${Boolean(slide===index) && `slider__bullet--active`}` }
-                        key={`slide-${index}`}
-                    /> )}
-            </div>
+            {<Bullets arr={sliders} activeIndex={slide} blockType={`slider`} isLight={sliders[slide].isLightTheme}/>}
         </div>
     </section>
 };
