@@ -1,0 +1,33 @@
+.offices {
+  margin: 0;
+  padding: 55px 0 0;
+
+  @media (min-width: 768px) {
+    padding: 55px 45px 0;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 96px auto 0;
+    padding: 0 98px;
+    gap: 0;
+  }
+}
+
+.offices__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 140%;
+  margin: 0 15px 35px;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+    line-height: 140%;
+    margin: 0 0 45px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 41px;
+    line-height: 140%;
+    margin: 0 0 51px;
+  }
+}

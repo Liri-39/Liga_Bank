@@ -1,7 +1,10 @@
-export const formatDate = (date) => {
-    return date.toISOString().split('T')[0]
+const MONTH = 12;
+
+export const priceFormat = (data) => {
+    const price = Number.prototype.toFixed.call(parseFloat(data) || 0);
+    return price.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ");
 }
 
-export const parseDate = (date) => {
-    return `${date.split('-')[0]}/${date.split('-')[1]}/${date.split('-')[2]}`
+export const getMothInCreditPeriod = (period) => {
+    return period * MONTH
 }
