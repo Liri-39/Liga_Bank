@@ -7,11 +7,13 @@ const Footer = () => {
             <div className="page-footer__info">
                 <h2 className="visually-hidden">Общая информация</h2>
                 <a className="logo page-footer__logo" href="/" aria-label="on top link">
-                    <Icons name="logo-full" width="150" height="27"/>
+                    <Icons name="logo" width="150" height="30"/>
                 </a>
-                <span className="page-footer__info-item">150015, г. Москва, ул. Московская, д. 32</span>
-                <span className="page-footer__info-item">Генеральная лицензия Банка России №1050</span>
-                <span className="page-footer__info-item">Ⓒ Лига Банк, 2019</span>
+                <div className="page-footer__address">
+                    <span className="page-footer__address-item">150015, г. Москва, ул. Московская, д. 32</span>
+                    <span className="page-footer__address-item">Генеральная лицензия Банка России №1050</span>
+                    <span className="page-footer__address-item">Ⓒ Лига Банк, 2019</span>
+                </div>
             </div>
             <h2 className="visually-hidden">Навигация по сайту</h2>
             <ul className="page-footer__nav">

@@ -8,7 +8,7 @@
 }
 
 .social__nav-item {
-  margin-left: 15px;
+  margin-left: 20px;
 
   &:nth-child(1) {
     margin-left: 0;
@@ -16,5 +16,13 @@
 
   &:hover {
     filter: drop-shadow(0 0 10px $bright-blue);
+  }
+
+  @media (min-width: 768px) {
+    margin-left: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    margin-left: 15px;
   }
 }
