@@ -8,9 +8,13 @@
   align-content: space-between;
   border-radius: 4px;
 
+  @media (min-width: 768px) {
+    min-height: 389px;
+    padding: 52px 60px 62px;
+  }
+
   @media (min-width: 1024px) {
     margin-top: 7px;
-    height: 389px;
     padding: 56px 58px 60px;
     align-content: flex-start;
   }
@@ -24,14 +28,25 @@
   margin: 0;
   margin-bottom: 10px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
+    width: 100%;
     font-size: 22px;
+    line-height: 140%;
     margin: 0;
   }
 }
 
 .offer__item {
   width: 100%;
+
+  @media (min-width: 768px) {
+    width: 40%;
+
+    &:nth-child(2n+1) {
+      width: 60%;
+      padding-left: 5px;
+    }
+  }
 
   @media (min-width: 1024px) {
     width: 50%;
@@ -56,6 +71,10 @@
     font-size: 14px;
   }
 
+  @media (min-width: 768px) {
+    margin-top: 8px;
+  }
+
   @media (min-width: 1024px) {
     margin-top: 0;
   }
@@ -69,7 +88,7 @@
   padding: 0;
   margin: 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     font-size: 22px;
   }
 }
@@ -79,7 +98,7 @@
   font-size: 16px;
   line-height: 140%;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     font-size: 16px;
   }
 }

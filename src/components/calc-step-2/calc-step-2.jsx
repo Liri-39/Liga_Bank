@@ -78,7 +78,7 @@ const CalcStep2 = () => {
     }
 
     return <div className="form__item form__item--step2">
-        <h3 className="form__item-title">Шаг 2. Введите параметры кредита</h3>
+        <h3 className="form__item-title form__item-title--step2">Шаг 2. Введите параметры кредита</h3>
         <div className="form__param-block">
             <label className="form__label"
                    htmlFor="targetPrice">Стоимость {`${(creditType === 1) ? `недвижимости` : `автомобиля`}`}</label>

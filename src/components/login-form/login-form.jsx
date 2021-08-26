@@ -49,7 +49,7 @@ const LoginForm = (props) => {
                 <label className="login-form__label" htmlFor="password">Пароль
                 <input className="login-form__password"
                        id="password"
-                       type={`${isShowPassword ? `password` : `text`}`}
+                       type={`${isShowPassword ? `text` : `password`}`}
                        value={formField.password}
                        onChange={handleChangeInput}
                        required/>
