@@ -143,7 +143,7 @@ const CalcStep2 = () => {
                    onInput={handleInputPeriodChange}
                    aria-label="Срок кредитования"/>
             <label className="visually-hidden" htmlFor="creditPeriodRange">Срок кредитования</label>
-            <input className="form__input"
+            <input className="form__input form__input--period"
                    type="range"
                    id="creditPeriodRange"
                    name="creditPeriodRange"
