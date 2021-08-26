@@ -1,4 +1,4 @@
-export const menu = [
+export const menuItems = [
     {
         name: `Услуги`,
         link: `#services`,

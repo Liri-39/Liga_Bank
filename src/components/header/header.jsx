@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {useSelector} from "react-redux";
 import PropTypes from "prop-types";
 import Icons from "../icons/icons";
-import {menu} from "../../mocks/menu";
+import {menuItems} from "../../mocks/menu-items";
 import {getIsLoginStatus} from "../../store/main/selectors";
 
 const Header = (props) => {
@@ -37,7 +37,7 @@ const Header = (props) => {
             <nav className={`nav-side page-header__nav ${isMenuOpen ? `mobile-menu__nav` : ``}`}>
                 <h2 className="visually-hidden">Навигация по сайту</h2>
                 <ul className={`nav-side__list ${isMenuOpen ? `mobile-menu__list` : ``}`}>
-                    {menu.map((item, index) =>
+                    {menuItems.map((item, index) =>
                     <li className={`nav-side__list-item ${isMenuOpen ? `mobile-menu__item` : ``}`} key={`title-${index}`}>
                         <a href={item.link}>{item.name}</a>
                     </li>)}
