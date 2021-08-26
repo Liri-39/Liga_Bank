@@ -132,7 +132,7 @@ const CalcStep2 = () => {
                 <span>{creditParams.initialFee}%</span>
             </div>
         </div>
-        <div className="form__param-block">
+        <div className="form__param-block form__param-block--period">
             <label className="form__label" htmlFor="creditPeriod">Срок кредитования</label>
             <input className="form__input"
                    type="number"

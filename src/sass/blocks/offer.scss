@@ -15,8 +15,8 @@
 
   @media (min-width: 1024px) {
     margin-top: 7px;
-    padding: 56px 58px 60px;
-    align-content: flex-start;
+    padding: 53px 58px 63px;
+    align-content: space-between;
   }
 }
 
@@ -52,6 +52,7 @@
     width: 50%;
 
     &:nth-child(2n+1) {
+      width: 50%;
       padding-left: 35px;
     }
   }
@@ -71,14 +72,9 @@
     font-size: 14px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     margin-top: 8px;
   }
-
-  @media (min-width: 1024px) {
-    margin-top: 0;
-  }
-
 }
 
 .offer__item-value {

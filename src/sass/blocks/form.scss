@@ -13,7 +13,7 @@
   @media (min-width: 1024px) {
     grid-template-columns: 600px auto;
     grid-column-gap: 70px;
-    grid-row-gap: 35px;
+    grid-row-gap: 33px;
   }
 }
 
@@ -71,8 +71,8 @@
       grid-row: 3;
       width: 770px;
       min-height: 722px;
-      margin: 70px auto 0;
-      padding: 60px 70px;
+      margin: 18px auto 0;
+      padding: 65px 70px;
       background: $light-grey;
     }
   }
@@ -96,6 +96,10 @@
   @media (min-width: 1024px) {
     font-size: 22px;
     margin: 0 0 12px 0;
+
+    &--step2 {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -144,7 +148,7 @@
 
 
   @media (min-width: 1024px) {
-    margin: 5px 0 3px;
+    margin: 7px 0 9px;
     line-height: 140%;
     font-size: 16px;
   }
@@ -200,6 +204,10 @@
     outline: none;
   }
 
+  @media (min-width: 1024px) {
+    margin-top: 0;
+  }
+
   &--request {
     text-align: start;
     padding: 24px;
@@ -237,10 +245,6 @@
   width: 100%;
   display: flex;
   position: relative;
-
-  @media (min-width: 1024px) {
-    margin-top: 6px;
-  }
 }
 
 .form__button-input {
@@ -376,6 +380,10 @@
 
   @media (min-width: 1024px) {
     margin: 7px 0 5px;
+
+    &--range {
+      margin-top: 11px;
+    }
   }
 }
 
@@ -407,6 +415,7 @@
     @media (min-width: 768px) {
       font-size: 16px;
       margin-top: 10px;
+      height: 51px;
     }
   }
 }
@@ -421,7 +430,11 @@
   }
 
   @media (min-width: 1024px) {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
+
+    &:last-child {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -500,7 +513,7 @@ input[type="checkbox"]:checked + .form__label:before {
     }
   }
 
-  @media (max-width: 1023px) {
+  @media (min-width: 768px) {
     min-height: 55px;
   }
 }
