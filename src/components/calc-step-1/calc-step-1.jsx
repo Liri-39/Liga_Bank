@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import PropTypes from "prop-types";
 import {CreditTypes} from "../../const";
 import Option from "../option/option";
 
@@ -18,8 +19,8 @@ const CalcStep1 = (props) => {
         }
     }
 
-    const handleChangeType = (evt) => {
-        props.handleChangeTypeCredit(evt);
+    const onChangeType = (evt) => {
+        props.onChangeTypeCredit(evt);
         setIsOptionsOpen(!isOptionsOpen);
     }
 
@@ -37,7 +38,7 @@ const CalcStep1 = (props) => {
             {CreditTypes.map((value, key) =>
                 <Option key={`options-${key}`}
                         type={props.activeType}
-                        handleChangeType={handleChangeType}
+                        onChangeType={onChangeType}
                         id={value.id}
                         name={value.name}
                 />
@@ -46,5 +47,11 @@ const CalcStep1 = (props) => {
         }
     </div>
 }
+
+CalcStep1.propTypes = {
+    activeType:PropTypes.number.isRequired,
+    creditName: PropTypes.string.isRequired,
+    onChangeTypeCredit: PropTypes.func.isRequired
+};
 
 export default CalcStep1;

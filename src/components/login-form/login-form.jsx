@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import PropTypes from "prop-types";
 import Icons from "../icons/icons";
 
 const LoginForm = (props) => {
@@ -22,7 +23,7 @@ const LoginForm = (props) => {
         setIsShowPassword(!isShowPassword);
     }
 
-    return <div className="login-form" onKeyDown={props.handleEscKeyPress}>
+    return <div className="login-form" onKeyDown={props.onEscKeyPress}>
         <div className="login-form__wrap">
             <a className="login-form__logo" href="">
                 <Icons name='logo-form' width="150" height="27"/>
@@ -31,10 +32,11 @@ const LoginForm = (props) => {
             <button className="login-form__close"
                     type="button"
                     aria-label="Закрыть окно"
-                    onClick={props.handleLoginFormClose}
+                    onClick={props.onLoginFormClose}
             />
 
-            <form className="login-form__form" action="#" id="modal-form" method="post" onSubmit={props.handleLoginFormSubmit}>
+            <form className="login-form__form" action="#" id="modal-form" method="post"
+                  onSubmit={props.onLoginFormSubmit}>
                 <label className="login-form__label" htmlFor="login">Логин</label>
                 <input className="login-form__login"
                        id="login"
@@ -47,24 +49,31 @@ const LoginForm = (props) => {
                 />
 
                 <label className="login-form__label" htmlFor="password">Пароль
-                <input className="login-form__password"
-                       id="password"
-                       type={`${isShowPassword ? `text` : `password`}`}
-                       value={formField.password}
-                       onChange={handleChangeInput}
-                       required/>
-                <button className="login-form__password-button"
-                        type="button"
-                        onClick={handleClick}/>
-                <a className="login-form__hint" href="#">Забыли пароль?</a></label>
+                    <input className="login-form__password"
+                           id="password"
+                           type={`${isShowPassword ? `text` : `password`}`}
+                           value={formField.password}
+                           onChange={handleChangeInput}
+                           required/>
+                    <button className="login-form__password-button"
+                            type="button"
+                            onClick={handleClick}/>
+                    <a className="login-form__hint" href="#">Забыли пароль?</a></label>
 
                 <button className="button login-form__button"
                         type="submit"
-                        onSubmit={props.handleLoginFormSubmit}
-                >Войти</button>
+                        onSubmit={props.onLoginFormSubmit}
+                >Войти
+                </button>
             </form>
         </div>
     </div>
 }
+
+LoginForm.propTypes = {
+    onEscKeyPress: PropTypes.func.isRequired,
+    onLoginFormSubmit: PropTypes.func.isRequired,
+    onLoginFormClose: PropTypes.func.isRequired,
+};
 
 export default LoginForm;

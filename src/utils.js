@@ -23,12 +23,13 @@ export const calcCreditSum = (id, params) => {
 export const calcRate = (id, params, rate) => {
     let autoRate;
     switch (id) {
-        case CreditTypesEnum.REALTY:
+        case CreditTypesEnum.REALTY: {
             if (params.creditPeriod >= rate.limitValue) {
                 return rate.aboveLimitValue
             }
             return rate.belowLimitValue;
-        case CreditTypesEnum.AUTO:
+        }
+        case CreditTypesEnum.AUTO: {
             autoRate = rate.belowLimitValue;
             if (params.targetPrice >= rate.limitValue) {
                 autoRate = rate.aboveLimitValue
@@ -40,8 +41,10 @@ export const calcRate = (id, params, rate) => {
                 autoRate = rate.withTwoInsurance
             }
             return autoRate
-        default:
+        }
+        default: {
             return ``
+        }
     }
 }
 
@@ -73,23 +76,32 @@ export const addZero = (orderNum, orderNumLength) => {
 
 export const periodInText = (period) => {
     switch (Number(period)) {
-        case (1):
+        case (1): {
             return `год`;
-        case (21):
+        }
+        case (21): {
             return `год`;
-        case (2):
+        }
+        case (2): {
             return `года`;
-        case (3):
+        }
+        case (3): {
             return `года`;
-        case (4):
+        }
+        case (4): {
             return `года`;
-        case (22):
+        }
+        case (22): {
             return `года`;
-        case (23):
+        }
+        case (23): {
             return `года`;
-        case (24):
+        }
+        case (24): {
             return `года`;
-        default:
+        }
+        default: {
             return `лет`
+        }
     }
 }

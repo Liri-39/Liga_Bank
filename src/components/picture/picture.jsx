@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Picture = ({webp, jpg}) => {
     return <picture className="slider__image">
@@ -7,5 +8,10 @@ const Picture = ({webp, jpg}) => {
              srcSet={`${jpg[0]} 1x, ${jpg[1]} 2x`} alt="Лига Банк.Кредиты на любой случай"/>
     </picture>
 }
+
+Picture.propTypes = {
+    webp: PropTypes.array.isRequired,
+    jpg: PropTypes.array.isRequired,
+};
 
 export default Picture;

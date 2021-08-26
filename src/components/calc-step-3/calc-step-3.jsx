@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {getCreditParams, getCreditType, getOrderNum} from "../../store/calculator/selectors";
 import {addZero, priceFormat, periodInText} from "../../utils"
-import {OrderNumLength} from "../../const";
+import {ORDER_LENGTH} from "../../const";
 import InputMask from "react-input-mask";
 import {setIsOrderSuccess} from "../../store/action";
 
@@ -38,7 +38,7 @@ const CalcStep3 = () => {
         <div className="form__request-wrap">
             <div className="form__request-item">
                 <p>Номер заявки</p>
-                <span>{`№ ${addZero(num, OrderNumLength)}`}</span>
+                <span>{`№ ${addZero(num, ORDER_LENGTH)}`}</span>
             </div>
 
             <div className="form__request-item">

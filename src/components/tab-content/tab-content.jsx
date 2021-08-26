@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const TabContent = (props) => {
     const tabImage = {
@@ -30,5 +31,20 @@ const TabContent = (props) => {
              style={tabImage}/>
     </>
 }
+
+TabContent.propTypes = {
+    tabItem: PropTypes.shape({
+        img: PropTypes.shape({
+            webp: PropTypes.array.isRequired,
+            jpg: PropTypes.array.isRequired,
+        }).isRequired,
+        advantageList: PropTypes.array.isRequired,
+        slogan: PropTypes.string.isRequired,
+        button: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        descriptionLink: PropTypes.string.isRequired,
+        descriptionLinkText: PropTypes.string.isRequired,
+    }).isRequired,
+};
 
 export default TabContent;

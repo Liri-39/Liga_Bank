@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Option = (props) => {
 
@@ -9,7 +10,7 @@ const Option = (props) => {
                value={props.id}
                id={`type-credit-${props.id}`}
                checked={Boolean(props.id === props.type)}
-               onChange={props.handleChangeType}
+               onChange={props.onChangeType}
         />
         <label className="form__option"
                htmlFor={`type-credit-${props.id}`}
@@ -19,6 +20,10 @@ const Option = (props) => {
     </>
 }
 
-
+Option.propTypes = {
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    onChangeType: PropTypes.func.isRequired,
+}.isRequired;
 
 export default Option;

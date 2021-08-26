@@ -36,7 +36,7 @@ const Calculator = () => {
     const income = calcIncome(payment);
 
 
-    const handleChangeTypeCredit = (evt) => {
+    const onChangeTypeCredit = (evt) => {
         evt.preventDefault();
         dispatch(changeCreditType(evt.target.value));
         dispatch(changeCreditName(evt.target.value));
@@ -49,7 +49,7 @@ const Calculator = () => {
         <h2 className="calc__title">Кредитный калькулятор</h2>
         <div className="form">
             {<CalcStep1
-                handleChangeTypeCredit={handleChangeTypeCredit}
+                onChangeTypeCredit={onChangeTypeCredit}
                 activeType={activeType}
                 creditName={creditName}/>}
             {activeType > 0 && <CalcStep2/>}

@@ -47,15 +47,11 @@ const Banner = () => {
     }
 
     const setNextSlide = () => {
-        if (slide < SLIDES_COUNT - 1) {
-            setSlide(slide + 1);
-        } else {setSlide(0)}
+        setSlide((slide < SLIDES_COUNT - 1) ? slide + 1 : 0);
     }
 
     const setPrevSlide = () => {
-        if (slide === 0) {
-            setSlide(SLIDES_COUNT - 1);
-        } else {setSlide( slide - 1)}
+        setSlide(slide === 0 ? SLIDES_COUNT - 1 : slide - 1);
     }
 
     useInterval(() => {

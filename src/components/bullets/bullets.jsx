@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Bullets = (props) => {
     return <div className={`bullets-block ${props.blockType}__bullets-block`}>
@@ -11,4 +12,10 @@ const Bullets = (props) => {
     </div>
 }
 
+Bullets.propTypes = {
+    arr: PropTypes.array.isRequired,
+    blockType: PropTypes.string.isRequired,
+    activeIndex: PropTypes.number.isRequired,
+    isLight: PropTypes.any.isRequired,
+};
 export default Bullets;

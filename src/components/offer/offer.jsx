@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {priceFormat} from "../../utils";
 import {useDispatch, useSelector} from "react-redux";
 import {getOrderNum} from "../../store/calculator/selectors";
@@ -43,5 +44,13 @@ const Offer = (props) => {
         >Оформить заявку</button>
     </div>
 }
+
+Offer.propTypes = {
+    sum: PropTypes.number.isRequired,
+    payment: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+    income: PropTypes.number.isRequired,
+    rate: PropTypes.number.isRequired
+};
 
 export default Offer;

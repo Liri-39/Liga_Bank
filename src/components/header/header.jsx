@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {useSelector} from "react-redux";
+import PropTypes from "prop-types";
 import Icons from "../icons/icons";
 import {menu} from "../../mocks/menu";
 import {getIsLoginStatus} from "../../store/main/selectors";
@@ -46,7 +47,7 @@ const Header = (props) => {
             <ul className={`nav-user page-header__nav-user ${isMenuOpen ? `mobile-menu__nav-user`: ``}`}>
                 <li className={`${isMenuOpen ? `mobile-menu__item` : ``}`}>
                     <a className={`nav-user__login ${isMenuOpen ? `mobile-menu__login` : ``}`}
-                       onClick={props.handleClickLoginLink}
+                       onClick={props.onClickLoginLink}
                        href="/"
                     >
                         <span>{`${isLogin ? `Выйти из Интернет-банка` : `Войти в Интернет-банк`}`}</span>
@@ -55,6 +56,10 @@ const Header = (props) => {
             </ul>
         </div>
     </header>
+};
+
+Header.propTypes = {
+    onClickLoginLink: PropTypes.func.isRequired,
 };
 
 export default Header;

@@ -22,12 +22,15 @@ const getNameByCreditType = (type) => {
 
 const getInfoByCreditType = (type) => {
     switch (type) {
-        case CreditTypesEnum.REALTY:
+        case CreditTypesEnum.REALTY: {
             return Object.assign({}, realtyCredit);
-        case CreditTypesEnum.AUTO:
+        }
+        case CreditTypesEnum.AUTO: {
             return Object.assign({}, autoCredit);
-        default:
+        }
+        default: {
             return [];
+        }
     }
 }
 

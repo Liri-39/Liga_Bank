@@ -16,23 +16,23 @@ const App = () => {
 
     const [isLoginFormOpen, setIsLoginFormOpen] = useState(false);
 
-    const handleClickLoginLink = (evt) => {
+    const onClickLoginLink = (evt) => {
         evt.preventDefault();
         setIsLoginFormOpen(true);
     }
 
-    const handleLoginFormClose = (evt) => {
+    const onLoginFormClose = (evt) => {
         evt.preventDefault();
         setIsLoginFormOpen(false);
     }
 
-    const handleEscKeyPress = (evt) => {
+    const onEscKeyPress = (evt) => {
         if (evt.key === `Escape`) {
             setIsLoginFormOpen(false);
         }
     }
 
-    const handleLoginFormSubmit = (evt) => {
+    const onLoginFormSubmit = (evt) => {
         evt.preventDefault();
         dispatch(setIsLoginSuccess(true));
         setIsLoginFormOpen(false);
@@ -40,14 +40,14 @@ const App = () => {
 
     return <>
         {isLoginFormOpen &&
-        <LoginForm handleLoginFormClose={handleLoginFormClose}
-                   handleLoginFormSubmit={handleLoginFormSubmit}
-                   handleEscKeyPress={handleEscKeyPress}/>
+        <LoginForm onLoginFormClose={onLoginFormClose}
+                   onLoginFormSubmit={onLoginFormSubmit}
+                   onEscKeyPress={onEscKeyPress}/>
         }
         {isOrderSuccess &&
         <PopUp/>
         }
-        {<Header handleClickLoginLink={handleClickLoginLink}/>}
+        {<Header onClickLoginLink={onClickLoginLink}/>}
         {<Main/>}
         {<Footer/>}
     </>

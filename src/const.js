@@ -1,6 +1,7 @@
 export const SLIDES_COUNT = 3;
-
+export const MATERNITY_CAPITAL_VALUE = 470000;
 export const SLIDE_DELAY = 4000;
+export const ORDER_LENGTH = 4;
 
 export const BlockTypes = {
     SLIDER: `slider`,
@@ -23,8 +24,6 @@ export const CreditTypes = [
     }
 ]
 
-export const MATERNITY_CAPITAL_VALUE = 470000;
-
 export const  CreditOptions = {
     MATERNITY_CAPITAL: `maternityCapital`,
     AUTO_INSURANCE: `autoInsurance`,
@@ -36,6 +35,3 @@ export const centerMap = {
     zoom: 5,
     controls: []
 };
-
-
-export const OrderNumLength = 4;
