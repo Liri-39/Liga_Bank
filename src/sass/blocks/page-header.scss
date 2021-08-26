@@ -65,3 +65,53 @@
 .page-header__logo {
 }
 
+.page-header__menu-button {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .page-header__menu-button {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    margin: 0;
+    margin-right: 13px;
+    margin-bottom: 3px;
+    width: 16px;
+    height: 10px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .page-header__menu-button span {
+    display: block;
+    width: 16px;
+    height: 1px;
+    background-color: $graphite;
+
+    &:before {
+      content: "";
+      position: relative;
+      top: -5px;
+      display: block;
+      width: 16px;
+      height: 1px;
+      background-color: $graphite;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: relative;
+      top: 4px;
+      width: 16px;
+      height: 1px;
+      background-color: $graphite;
+    }
+  }
+}

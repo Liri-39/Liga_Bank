@@ -1,8 +1,12 @@
 import React, {useState} from "react";
+import {useSelector} from "react-redux";
 import Icons from "../icons/icons";
 import {menu} from "../../mocks/menu";
+import {getIsLoginStatus} from "../../store/main/selectors";
 
-const Header = () => {
+const Header = (props) => {
+
+    const isLogin = useSelector(getIsLoginStatus);
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,15 +20,10 @@ const Header = () => {
         setIsMenuOpen(false);
     }
 
-    const handleClickLoginLink = (evt) => {
-        evt.preventDefault();
-
-    }
-
     return <header className={`page__header page-header ${isMenuOpen? `mobile-menu` : ``}`}>
         <div className={`container page-header__wrapper ${isMenuOpen? `mobile-menu__wrapper` : ``}`}>
             <button
-                className="mobile-menu__menu-button"
+                className="page-header__menu-button"
                 onClick={handleClickMenuButton}
             >
                 <span/>
@@ -47,10 +46,10 @@ const Header = () => {
             <ul className={`nav-user page-header__nav-user ${isMenuOpen ? `mobile-menu__nav-user`: ``}`}>
                 <li className={`${isMenuOpen ? `mobile-menu__item` : ``}`}>
                     <a className={`nav-user__login ${isMenuOpen ? `mobile-menu__login` : ``}`}
-                       onClick={handleClickLoginLink}
+                       onClick={props.handleClickLoginLink}
                        href="/"
                     >
-                        <span>Войти в Интернет-банк</span>
+                        <span>{`${isLogin ? `Выйти из Интернет-банка` : `Войти в Интернет-банк`}`}</span>
                     </a>
                 </li>
             </ul>

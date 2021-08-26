@@ -23,10 +23,19 @@ export const CreditTypes = [
     }
 ]
 
-export const MATERNITY_CAPITAL = 470000;
+export const MATERNITY_CAPITAL_VALUE = 470000;
+
+export const  CreditOptions = {
+    MATERNITY_CAPITAL: `maternityCapital`,
+    AUTO_INSURANCE: `autoInsurance`,
+    LIFE_INSURANCE: `lifeInsurance`
+};
 
 export const centerMap = {
     center: [56.838052, 60.596599],
     zoom: 5,
     controls: []
 };
+
+
+export const OrderNumLength = 4;
