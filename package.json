@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://Liri-39.github.io/liga-bank",
   "dependencies": {
-    "@babel/core": "7.18.6",
     "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^16.0.0",
