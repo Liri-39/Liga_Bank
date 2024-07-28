@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/liga-bank/static/css/main.efe0dc78.css",
+    "main.js": "/liga-bank/static/js/main.38297448.js",
+    "static/media/map.png": "/liga-bank/static/media/map.865b0fca08c56b7419f1.png",
+    "static/media/roboto-medium.woff": "/liga-bank/static/media/roboto-medium.e624b10d53c919bd7496.woff",
+    "static/media/roboto-bold.woff": "/liga-bank/static/media/roboto-bold.9fa4a8113c081e9b3138.woff",
+    "static/media/roboto-regular.woff": "/liga-bank/static/media/roboto-regular.0944be1093c62cedb919.woff",
+    "static/media/roboto-medium.woff2": "/liga-bank/static/media/roboto-medium.57b8a81c7519e4d6b555.woff2",
+    "static/media/roboto-bold.woff2": "/liga-bank/static/media/roboto-bold.b21da07c934a28b2fef3.woff2",
+    "static/media/roboto-regular.woff2": "/liga-bank/static/media/roboto-regular.9d43b86421e004e704b9.woff2",
+    "static/media/sprite.svg": "/liga-bank/static/media/sprite.7c2a9f8085c0a8707ec379b1a80cb9ed.svg",
+    "index.html": "/liga-bank/index.html",
+    "main.efe0dc78.css.map": "/liga-bank/static/css/main.efe0dc78.css.map",
+    "main.38297448.js.map": "/liga-bank/static/js/main.38297448.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efe0dc78.css",
+    "static/js/main.38297448.js"
+  ]
+}
