@@ -25,7 +25,7 @@ const LoginForm = (props) => {
 
     return <div className="login-form" onKeyDown={props.onEscKeyPress}>
         <div className="login-form__wrap">
-            <a className="login-form__logo" href="">
+            <a className="login-form__logo" href="#">
                 <Icons name='logo-form' width="150" height="27"/>
             </a>
 
