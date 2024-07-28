@@ -1,0 +1,37 @@
+
+.bullets-block {
+  grid-row: 4;
+  grid-column: 1/-1;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 6px;
+
+  @media (min-width: 768px) {
+    margin-top: 2px;
+    column-gap: 8px;
+  }
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-radius: 50%;
+  background-color: $ocean-blue;
+
+  @media (min-width: 768px) {
+    width: 8px;
+    height: 8px;
+  }
+
+  &--active {
+    background-color: $light-grey;
+  }
+
+  &--active-light {
+    background-color: $grey-grey;
+  }
+}
